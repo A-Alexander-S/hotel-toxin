@@ -1,0 +1,14 @@
+$param-color: blue;
+
+h1 {
+  color: red;
+}
+
+.list {
+  margin: 0 auto;
+  
+  .list-item {
+    font-size: 30px;
+    color: $param-color;
+  }
+}
