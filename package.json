@@ -1,0 +1,46 @@
+{
+  "name": "hotel-toxin",
+  "version": "1.0.0",
+  "description": "hotel-toxin",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "server": "webpack serve --mode development",
+    "pug:start": "pug index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Alexander-S/hotel-toxin.git"
+  },
+  "author": "Akimov Alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-Alexander-S/hotel-toxin/issues"
+  },
+  "homepage": "https://github.com/A-Alexander-S/hotel-toxin#readme",
+  "devDependencies": {
+    "asset": "^0.4.13",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "node-sass": "^6.0.1",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.36.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
