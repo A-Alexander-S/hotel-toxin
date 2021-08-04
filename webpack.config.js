@@ -14,7 +14,8 @@ module.exports = {
   mode: "development",
   entry: {
     'index': PATH.source + '/pages/index/index.js',
-    'twoIndex': PATH.source + '/pages/twoIndex/twoIndex.js'
+    'twoIndex': PATH.source + '/pages/twoIndex/twoIndex.js',
+    'ui_kit-1': PATH.source + '/pages/ui_kit/ui_kit-1/ui_kit-1.js',
   },
   output: {
     path: PATH.dist, //path.resolve(__dirname, "dist")
@@ -38,9 +39,15 @@ module.exports = {
       template: PATH.source + '/pages/twoIndex/twoIndex.pug',
       chunks: ['twoIndex'],
     }),
+    new HtmlWebpackPlugin({
+      filename: PATH.dist + '/ui_kit/ui_kit-1.html',
+      template: PATH.source + '/pages/ui_kit/ui_kit-1/ui_kit-1.pug',
+      chunks: ['ui_kit-1'],
+    }),
     new MiniCssExtractPlugin({
       filename: '/styles/[name].css',
     }),
+    new CleanWebpackPlugin({ dry: true, }),
   ],
   module: {
     rules: [
@@ -81,7 +88,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext][query]'

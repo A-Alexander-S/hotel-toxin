@@ -1,0 +1,21 @@
+include ./pug/mixins/colors-item.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset = "utf-8")
+    meta(name = "viewport", content = "initial-scale=1.0", width=device-width)
+    title Ui kit: page 1
+  body
+    main.content
+      img.logo(src=require("../../../assets/img/logo.svg"), alt="cat")
+      div.container
+        section.colors
+          ul.colors-list
+            +colors-item('Dark Shade 100%', '#1F2041')(class='dark-100')
+            +colors-item('Dark Shade 75%', '#1F2041')(class='dark-75')
+            +colors-item('Dark Shade 50%', '#1F2041')(class='dark-50')
+            +colors-item('Dark Shade 25%', '#1F2041')(class='dark-25')
+            +colors-item('Dark Shade 5%', '#1F2041')(class='dark-5')
+            +colors-item('Purple', '#BC9CFF')(class='purple')
+            +colors-item('Green', '#6FCF97')(class='green')
+        section.sub-section
