@@ -23,10 +23,12 @@ module.exports = {
     // assetModuleFilename: 'images/[name][ext][query]',
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
     // compress: true,
     port: 8080,
     // open: true,
+    // hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -47,7 +49,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '/styles/[name].css',
     }),
-    new CleanWebpackPlugin({ dry: true, }),
+    // new webpack.HotModuleReplacementPlugin(),
+    // new CleanWebpackPlugin({}),
   ],
   module: {
     rules: [
@@ -94,49 +97,6 @@ module.exports = {
           filename: 'fonts/[name][ext][query]'
         }
       },
-      // {
-      //   test: /\.(png|jpg|svg|gif)$/,
-      //   dependency: { not: ['url'] },
-
-      //   use: [
-      //     {
-      //       // loader: 'file-loader',
-      //       loader: 'url-loader',
-      //       options: {
-      //         name: 'images/[name].[ext]',
-      //         limit: 8192,
-      //       }
-      //     },
-      //   ],
-      //   type: 'javascript/auto',
-      // },
-      // {
-      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      //   // dependency: { not: ['url'] },
-
-      //   // type: 'asset/inline',
-      //   use: [
-      //     {
-      //       loader: 'url-loader',
-      //       options: {
-      //         name: 'fonts/[name].[ext]',
-      //         limit: 8192,
-      //       }
-      //     },
-      //   ],
-      // },
-      // {
-      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      //   // dependency: { not: ['url'] },
-      //   loader: 'file-loader',
-      //   options: {
-      //     name: 'fonts/[name].[ext]'
-      //   }
-      // },
-      // {
-      //   test: /\.png/,
-      //   type: 'asset/resource'
-      // }
     ],
   }
 };
