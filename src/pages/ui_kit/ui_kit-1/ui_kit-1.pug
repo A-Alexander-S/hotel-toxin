@@ -11,11 +11,29 @@ html(lang="en")
       div.container
         section.colors
           ul.colors-list
-            +colors-item('Dark Shade 100%', '#1F2041')(class='dark-100')
-            +colors-item('Dark Shade 75%', '#1F2041')(class='dark-75')
-            +colors-item('Dark Shade 50%', '#1F2041')(class='dark-50')
-            +colors-item('Dark Shade 25%', '#1F2041')(class='dark-25')
-            +colors-item('Dark Shade 5%', '#1F2041')(class='dark-5')
-            +colors-item('Purple', '#BC9CFF')(class='purple')
-            +colors-item('Green', '#6FCF97')(class='green')
-        section.sub-section
+            +colors-list__item('Dark Shade 100%', '#1F2041')(class='dark-100')
+            +colors-list__item('Dark Shade 75%', '#1F2041')(class='dark-75')
+            +colors-list__item('Dark Shade 50%', '#1F2041')(class='dark-50')
+            +colors-list__item('Dark Shade 25%', '#1F2041')(class='dark-25')
+            +colors-list__item('Dark Shade 5%', '#1F2041')(class='dark-5')
+            +colors-list__item('Purple', '#BC9CFF')(class='purple')
+            +colors-list__item('Green', '#6FCF97')(class='green')
+        section.sub-section-text
+          ul.sub-section-text__list
+            li.sub-section-text__list-item
+              p.sub-section-text__list-item-symbol.sub-section-symbol H1
+              p.sub-section-text__list-item-description.sub-section-title
+                |This one is the sub-section or widget title
+            li.sub-section-text__list-item
+               p.sub-section-text__list-item-symbol.sub-symbol-widget H2
+               p.sub-section-text__list-item-description.sub-title-widget 
+                |Next one is the item title inside widgets
+            li.sub-section-text__list-item
+               p.sub-section-text__list-item-symbol.label-cta-symbol H3
+               p.sub-section-text__list-item-description.label-cta
+                |This is a label or CTA text
+            li.sub-section-text__list-item
+               p.sub-section-text__list-item-symbol.main-text-symbol Body
+               p.sub-section-text__list-item-description.main-text
+                |This is the body text which is used for most <br>
+                |of the design, like paragraphs, lists, etc.
