@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const PATH = {
   source: path.join(__dirname, 'src'),
@@ -10,25 +8,21 @@ const PATH = {
 };
 
 module.exports = {
-  // context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: {
     'index': PATH.source + '/pages/index/index.js',
     'twoIndex': PATH.source + '/pages/twoIndex/twoIndex.js',
     'ui_kit-1': PATH.source + '/pages/ui_kit/ui_kit-1/ui_kit-1.js',
+    'formElements': PATH.source + '/pages/ui_kit/formElements/formElements.js',
   },
   output: {
-    path: PATH.dist, //path.resolve(__dirname, "dist")
+    path: PATH.dist,
     filename: 'js/[name].js',
-    // assetModuleFilename: 'images/[name][ext][query]',
   },
   devServer: {
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
-    // compress: true,
     port: 8080,
-    // open: true,
-    // hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -46,11 +40,14 @@ module.exports = {
       template: PATH.source + '/pages/ui_kit/ui_kit-1/ui_kit-1.pug',
       chunks: ['ui_kit-1'],
     }),
+    new HtmlWebpackPlugin({
+      filename: PATH.dist + '/ui_kit/formElements.html',
+      template: PATH.source + '/pages/ui_kit/formElements/formElements.pug',
+      chunks: ['formElements'],
+    }),
     new MiniCssExtractPlugin({
       filename: '/styles/[name].css',
     }),
-    // new webpack.HotModuleReplacementPlugin(),
-    // new CleanWebpackPlugin({}),
   ],
   module: {
     rules: [
