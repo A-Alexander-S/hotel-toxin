@@ -25,7 +25,29 @@ html(lang="en")
             div.amount-guests.form-elements__column-item
               div.caption
                 p Dropdown
-              input.dropdown-guest(type="email" placeholder="Email")
+                p
+              div.amount-guest__dropdown
+                div.amount-guest__dropdown-desc Сколько гостей
+                img.img-row(src=require("./row_expand.png"), alt="")
+              ul.amount-guest__list
+                li.amount-guest__list-item
+                  div Взрослые
+                  div.amount-guest__adults
+                    img(src=require("./circle-deduct.svg"), alt="Кружок уменьшения").pic-deduct-adults
+                    div.amount-guest__quantity-adults 0
+                    img(src=require("./circle-add.svg"), alt="Кружок увеличения").pic-add-adults
+                    div.amount-guest__add-adults.circle
+                li.amount-guest__list-item
+                  div Дети
+                  div.amount-guest__children 0
+                li.amount-guest__list-item
+                  div Младенцы
+                  div.amount-guest__babies 0
+            div.masked-date
+              div.caption
+                p Masked text field
+                p
+              div.masked-date__field ДД.ММ.ГГГГ
           div.form-elements__column
           div.form-elements__column
       footer.footer
