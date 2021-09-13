@@ -1,0 +1,29 @@
+mixin amount-guests (imgRowDown,imgCircleDeduct,imgCircleAdd)
+  div.amount-guests
+    div.caption
+      p Dropdown
+      p
+    div.amount-guest__dropdown
+      div.amount-guest__dropdown-desc Сколько гостей
+      img.img-row(src=require(`/src/${imgRowDown}.png`), alt="Стрелка")
+    ul.amount-guest__list
+      li.amount-guest__list-item
+        div Взрослые
+        div.amount-guest__adults
+          img(src=require(`/src/${imgCircleDeduct}.svg`), alt="Кружок уменьшения").pic-deduct-adults
+          div.amount-guest__quantity-adults 0
+          img(src=require(`/src/${imgCircleAdd}.svg`), alt="Кружок увеличения").pic-add-adults
+      li.amount-guest__list-item
+        div Дети
+        div.amount-guest__children
+          img(src=require(`/src/${imgCircleDeduct}.svg`), alt="Кружок уменьшения").pic-deduct-children
+          div.amount-guest__quantity-children 0
+          img(src=require(`/src/${imgCircleAdd}.svg`), alt="Кружок увеличения").pic-add-children
+      li.amount-guest__list-item
+        div Младенцы
+        div.amount-guest__babies
+          img(src=require(`/src/${imgCircleDeduct}.svg`), alt="Кружок уменьшения").pic-deduct-babies
+          div.amount-guest__quantity-babies 0
+          img(src=require(`/src/${imgCircleAdd}.svg`), alt="Кружок увеличения").pic-add-babies
+      li.amount-guest__list-button
+        button.amount-guest__button-apply(name="button") применить

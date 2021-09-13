@@ -9,6 +9,11 @@ const PATH = {
 
 module.exports = {
   mode: "development",
+  // resolve: {
+  //   alias: {
+  //     absolute: path.resolve(__dirname, 'src'),
+  //   },
+  // },
   entry: {
     'index': PATH.source + '/pages/index/index.js',
     'twoIndex': PATH.source + '/pages/twoIndex/twoIndex.js',
@@ -54,21 +59,24 @@ module.exports = {
       {
         test: /\.pug$/,
         loader: "pug-loader",
-        options: {
-          pretty: true
-        }
       },
       {
         test: /\.scss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
-          "sass-loader"
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass"),
+            },
+          },
         ],
       },
       {
         test: /\.(png|jpg|svg|gif)$/,
         type: 'asset/resource',
+        exclude: PATH.source + '/assets/fonts/',
         generator: {
           filename: 'images/[name][ext][query]'
         }
@@ -88,7 +96,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext][query]'

@@ -1,0 +1,68 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
+
+
+.length-stay {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #FFFFFF;
+}
+
+.date-arrival {
+  & p {    
+    font-family: 'Montserrat-Bold';
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark-100;
+    margin-bottom: .5rem;
+  }
+}
+
+.date-arrival__dropdown {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 15px 13px 13px;
+  background: #FFFFFF;
+  border: 1px solid $dark-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  line-height: 18px;
+  color:  $dark-75;
+  & img {
+    margin-top: 7px;
+  }
+}
+
+.date-departure {
+  & p {    
+    font-family: 'Montserrat-Bold';
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark-100;
+    margin-bottom: .5rem;
+  }
+}
+
+.date-departure__dropdown {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 15px 13px 13px;
+  background: #FFFFFF;
+  border: 1px solid $dark-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  line-height: 18px;
+  color:  $dark-75;
+  & img {
+    margin-top: 7px;
+  }
+}
