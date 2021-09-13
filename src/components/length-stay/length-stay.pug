@@ -1,0 +1,11 @@
+
+mixin length-stay(arrival,departure,path)
+  div.length-stay
+    div.date-arrival
+      p #{arrival}
+      div.date-arrival__dropdown ДД.ММ.ГГГГ
+        img.img-row(src=require(`/src/${path}.png`), alt="Стрелка")
+    div.date-departure
+      p #{departure}
+      div.date-departure__dropdown 19.08.2019
+        img.img-row(src=require(`/src/${path}.png`), alt="Стрелка")

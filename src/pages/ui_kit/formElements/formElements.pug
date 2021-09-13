@@ -1,3 +1,11 @@
+include ../../../components/length-stay/length-stay.pug
+include ../../../components/amount_guest/amount_guest.pug
+
+- var imgRow_down = 'components/length-stay/row_down';
+- var imgRowDown = 'components/amount_guest/row_down';
+- var imgCircleDeduct = 'components/amount_guest/circle-deduct';
+- var imgCircleAdd = 'components/amount_guest/circle-add';
+
 doctype html
 html(lang="en")
   head
@@ -8,7 +16,7 @@ html(lang="en")
   body
     div.wrapper
       div.header
-        img.logo(src=require("../../../assets/img/logo.svg"), alt="cat")
+        img.logo(src=require("../../../assets/img/logo.svg"), alt="Логотип")
       main.main
         div.form-elements
           div.form-elements__column
@@ -22,32 +30,15 @@ html(lang="en")
                 p Text Field
                 p Hover / Focus
               input.input-email(type="email" placeholder="Email")
-            div.amount-guests.form-elements__column-item
-              div.caption
-                p Dropdown
-                p
-              div.amount-guest__dropdown
-                div.amount-guest__dropdown-desc Сколько гостей
-                img.img-row(src=require("./row_expand.png"), alt="")
-              ul.amount-guest__list
-                li.amount-guest__list-item
-                  div Взрослые
-                  div.amount-guest__adults
-                    img(src=require("./circle-deduct.svg"), alt="Кружок уменьшения").pic-deduct-adults
-                    div.amount-guest__quantity-adults 0
-                    img(src=require("./circle-add.svg"), alt="Кружок увеличения").pic-add-adults
-                    div.amount-guest__add-adults.circle
-                li.amount-guest__list-item
-                  div Дети
-                  div.amount-guest__children 0
-                li.amount-guest__list-item
-                  div Младенцы
-                  div.amount-guest__babies 0
-            div.masked-date
+            div.form-elements__column-item
+              +amount-guests(imgRowDown,imgCircleDeduct,imgCircleAdd)       
+            div.masked-date.form-elements__column-item
               div.caption
                 p Masked text field
                 p
               div.masked-date__field ДД.ММ.ГГГГ
+            div.form-elements__column-item
+              +length-stay("date Dropdown","date Dropdown",imgRow_down)
           div.form-elements__column
           div.form-elements__column
       footer.footer
