@@ -1,5 +1,8 @@
 
 let amountGuestDropdown = document.querySelector('.amount-guest__dropdown');
+let amountGuestListButtons = document.querySelector('.amount-guest__list-buttons');
+let amountGuestBtnClear = document.querySelector('.amount-guest__btn-clear');
+let amountGuestBtnApply = document.querySelector('.amount-guest__btn-apply');
 
 let amountGuestQuantityAdults = 0;
 let amountGuestQuantityChildren = 0;
@@ -9,29 +12,40 @@ function innerAmountGuests() {
   document.querySelector('.amount-guest__quantity-adults').innerHTML = amountGuestQuantityAdults;
   document.querySelector('.amount-guest__quantity-children').innerHTML = amountGuestQuantityChildren;
   document.querySelector('.amount-guest__quantity-babies').innerHTML = amountGuestQuantityBabies;
-
 };
 
-function innerGuestsCount() {
-  // let guestsCount = document.querySelector('.amount-guest__dropdown-desc');
+function innerTotalAmountGuests() {
   let count = amountGuestQuantityAdults + amountGuestQuantityChildren + amountGuestQuantityBabies;
-  let theEnding = (count = 1) ? 'гость' :
-    (count >= 2) ? 'гостя' :
-      'ddd';
+  let theEnding;
 
-  // if (count >= 2) {
-  //   theEnding = 'гостя';
-  // }
+  if (count > 0) {
+    amountGuestBtnClear.style.display = 'block';
+    amountGuestListButtons.style.justifyContent = 'space-between';
+  } else if (count == 0) {
+    amountGuestBtnClear.style.display = 'none';
+    amountGuestListButtons.style.justifyContent = '';
+  }
 
-  // if (count = 1) {
-  //   theEnding = 'гость';
-  // } else if (count >= 2) {
-  //   theEnding = 'гостя';
-  // } else {
-  //   theEnding = 'ddd';
-  // };
+  if (count == 1 || count == 21 || count == 31) {
+    theEnding = 'гость';
+  } else if ((count >= 2 && count < 5) || (count >= 22 && count <= 24)) {
+    theEnding = 'гостя';
+  } else if ((count >= 5 && count <= 20) || (count >= 25 && count <= 30)) {
+    theEnding = 'гостей';
+  } else if (count == 0) {
+    count = '';
+    theEnding = 'Сколько гостей';
+  }
 
   document.querySelector('.amount-guest__dropdown-desc').innerHTML = `${count} ${theEnding}`;
+};
+
+function clearAmountGuests() {
+  amountGuestQuantityAdults = 0;
+  amountGuestQuantityChildren = 0;
+  amountGuestQuantityBabies = 0;
+
+  innerAmountGuests();
 };
 
 function eventsAmountGuestsAddAndDeduct() {
@@ -48,13 +62,13 @@ function eventsAmountGuestsAddAndDeduct() {
   imgAddAdults.addEventListener('click', () => {
     amountGuestQuantityAdults++;
     innerAmountGuests();
-    innerGuestsCount();
+    innerTotalAmountGuests();
   });
 
   imgDeductAdults.addEventListener('click', () => {
     if (amountGuestQuantityAdults > 0) amountGuestQuantityAdults--;
     innerAmountGuests();
-    innerGuestsCount();
+    innerTotalAmountGuests();
   });
 
 
@@ -62,35 +76,48 @@ function eventsAmountGuestsAddAndDeduct() {
   imgDeductChildren.addEventListener('click', () => {
     if (amountGuestQuantityChildren > 0) amountGuestQuantityChildren--;
     innerAmountGuests();
-    innerGuestsCount();
+    innerTotalAmountGuests();
   });
 
   imgAddChildren.addEventListener('click', () => {
     amountGuestQuantityChildren++;
     innerAmountGuests();
-    innerGuestsCount();
+    innerTotalAmountGuests();
   });
+
 
 
   imgDeductBabies.addEventListener('click', () => {
     if (amountGuestQuantityBabies > 0) amountGuestQuantityBabies--;
     innerAmountGuests();
-    innerGuestsCount();
+    innerTotalAmountGuests();
   });
 
   imgAddBabies.addEventListener('click', () => {
     amountGuestQuantityBabies++;
     innerAmountGuests();
-    innerGuestsCount();
+    innerTotalAmountGuests();
+  });
+
+
+  amountGuestBtnClear.addEventListener('click', () => {
+    clearAmountGuests();
+    innerTotalAmountGuests();
+  });
+  amountGuestBtnApply.addEventListener('click', (e) => {
+    let amountGuestList = document.querySelector('.amount-guest__list');
+
+    amountGuestList.classList.toggle('block');
+    // e.stopPropagation();
   });
 }
+
 
 amountGuestDropdown.addEventListener('click', (e) => {
   let amountGuestList = document.querySelector('.amount-guest__list');
 
   amountGuestList.classList.toggle('block');
-
-  eventsAmountGuestsAddAndDeduct();
-  innerAmountGuests();
-  e.stopPropagation();
+  // e.stopPropagation();
 });
+
+eventsAmountGuestsAddAndDeduct();
