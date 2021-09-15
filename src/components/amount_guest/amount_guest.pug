@@ -25,5 +25,6 @@ mixin amount-guests (imgRowDown,imgCircleDeduct,imgCircleAdd)
           img(src=require(`/src/${imgCircleDeduct}.svg`), alt="Кружок уменьшения").pic-deduct-babies
           div.amount-guest__quantity-babies 0
           img(src=require(`/src/${imgCircleAdd}.svg`), alt="Кружок увеличения").pic-add-babies
-      li.amount-guest__list-button
-        button.amount-guest__button-apply(name="button") применить
+      li.amount-guest__list-buttons
+        button.amount-guest__btn-clear(name="button") очистить
+        button.amount-guest__btn-apply(name="button") применить

@@ -105,13 +105,23 @@
   margin: 0 5px;
 }
 
-.amount-guest__list-button {
+.amount-guest__list-buttons {
   display: flex;
   justify-content: end;
+  // justify-content: space-between;
   padding: 0.75rem 0.7rem 1.3rem 1.5rem;
 }
 
-.amount-guest__button-apply {
+.amount-guest__btn-clear {
+  font-family: 'Montserrat-Bold';
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  background-color: white;
+  display: none;
+}
+
+.amount-guest__btn-apply {
   font-family: 'Montserrat-Bold';
   font-size: 12px;
   text-transform: uppercase;
