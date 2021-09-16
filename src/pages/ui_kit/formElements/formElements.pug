@@ -1,10 +1,12 @@
 include ../../../components/length-stay/length-stay.pug
 include ../../../components/amount_guest/amount_guest.pug
+include ../../../components/dates-of-stay/dates-of-stay.pug
 
-- var imgRow_down = 'components/length-stay/row_down';
-- var imgRowDown = 'components/amount_guest/row_down';
-- var imgCircleDeduct = 'components/amount_guest/circle-deduct';
-- var imgCircleAdd = 'components/amount_guest/circle-add';
+- var imgRowDown_length_stay = 'components/length-stay/row_down';
+- var imgRowDown_amount_guest = 'components/amount_guest/row_down';
+- var imgCircleDeduct_amount_guest = 'components/amount_guest/circle-deduct';
+- var imgCircleAdd_amount_guest = 'components/amount_guest/circle-add';
+- var imgRowDown_filter_date = 'assets/img/row_down';
 
 doctype html
 html(lang="en")
@@ -31,14 +33,16 @@ html(lang="en")
                 p Hover / Focus
               input.input-email(type="email" placeholder="Email")
             div.form-elements__column-item
-              +amount-guests(imgRowDown,imgCircleDeduct,imgCircleAdd)       
+              +amount-guests(imgRowDown_amount_guest,imgCircleDeduct_amount_guest,imgCircleAdd_amount_guest) 
             div.masked-date.form-elements__column-item
               div.caption
                 p Masked text field
                 p
               div.masked-date__field ДД.ММ.ГГГГ
             div.form-elements__column-item
-              +length-stay("date Dropdown","date Dropdown",imgRow_down)
+              +length-stay("date Dropdown","date Dropdown",imgRowDown_length_stay)
+            div.form-elements__column-item  
+              +filter-dates(imgRowDown_filter_date) 
           div.form-elements__column
           div.form-elements__column
       footer.footer

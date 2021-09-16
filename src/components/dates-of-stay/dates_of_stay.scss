@@ -1,0 +1,36 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
+
+
+.filter-dates {
+  box-sizing: border-box;
+  & > .caption p {
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark-100;
+  }
+}
+
+.filter-dates__dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 26.6rem;
+  height: 4.4rem;
+  background: #FFFFFF;
+  border: 1px solid $dark-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0 15px 0 14px;
+  & > .img-row {
+    margin-top: 3px;
+  }
+}
+
+.filter-dates__dates-of-stay {
+  display: flex;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  color: $dark-75;
+}
