@@ -1,15 +1,23 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
+
 
 .amount-guests {
   font-family: 'Montserrat-Bold';
   position: relative;
   & > .caption {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
     margin-bottom: 6px;
+    & p {
+      font-family: 'Montserrat-Bold';
+      text-transform: uppercase;
+      color: $dark-100;
+    }
   }
   &:hover > .amount-guest__dropdown {
     border: 1px solid $dark-50;
-  }
-  &:hover > .amount-guest__list {
-    // display: block;
   }
 }
 
@@ -29,9 +37,6 @@
   font-family: 'Montserrat-Regular';
   font-size: 1.4rem;
   color: $dark-75;
-  & > .img-row {
-    // margin-top: 5px;
-  }
 }
 
 .amount-guest__dropdown-desc {
@@ -108,7 +113,6 @@
 .amount-guest__list-buttons {
   display: flex;
   justify-content: end;
-  // justify-content: space-between;
   padding: 0.75rem 0.7rem 1.3rem 1.5rem;
 }
 
