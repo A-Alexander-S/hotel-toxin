@@ -1,5 +1,5 @@
-@import "../../assets/styles/colors.scss";
-@import "../../assets/styles/fonts.scss";
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
 
 
 .filter-dates {
@@ -8,6 +8,7 @@
     font-family: 'Montserrat-Bold';
     font-size: 12px;
     text-transform: uppercase;
+    margin-bottom: 5px;
     color: $dark-100;
   }
 }

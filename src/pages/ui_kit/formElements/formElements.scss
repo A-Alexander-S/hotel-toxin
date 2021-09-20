@@ -37,27 +37,53 @@ html {
   &:nth-child(5) {
     margin-bottom: 42.7px;
   }
+  &:nth-child(6) {
+    margin-bottom: 43px;
+  }
 }
 
-.caption {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  font-size: 1.2rem;
-  & p {
-    font-family: 'Montserrat-Bold';
-    text-transform: uppercase;
-    color: $dark-100;
-  }
-  & p:last-child {
-    font-family: 'Montserrat-Regular';
-    text-transform: uppercase;
-    color: $dark-50;
-    margin-bottom: 1px;
+// .caption {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 5px;
+//   font-size: 1.2rem;
+//   & p {
+//     font-family: 'Montserrat-Bold';
+//     text-transform: uppercase;
+//     color: $dark-100;
+//   }
+//   & p:last-child {
+//     font-family: 'Montserrat-Regular';
+//     text-transform: uppercase;
+//     color: $dark-50;
+//     margin-bottom: 1px;
+//     }
+// }
+
+.email-box {
+  & .caption {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    & p {
+      font-family: 'Montserrat-Bold';
+      text-transform: uppercase;
+      color: $dark-100;
     }
+    & p:last-child {
+      font-family: 'Montserrat-Regular';
+      text-transform: uppercase;
+      color: $dark-50;
+      margin-bottom: 1px;
+      }
+  }
 }
 
 .input-email {
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  
   width: 32rem;
   height: 4.4rem;
   display: flex;
@@ -65,7 +91,7 @@ html {
   padding-left: 14px;
   padding-top: 1px;
   background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $dark-25;
   box-sizing: border-box;
   border-radius: 4px;
   &::placeholder {
@@ -74,35 +100,55 @@ html {
     color: $dark-25;
     }
   &:hover {
-    color: $dark-75;
     font-size: 1.4rem;
     border: 1px solid $dark-50;
   }  
 }
 
-@import "../../../components/amount_guest/amount_guest.scss";
+@import "../../../components/amount-guest/scss/amount-guest.scss";
 
 .masked-date {
-  margin-top: 22.5px;
+  // margin-top: 22.5px;
+  & .caption {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+    & p {
+      font-family: 'Montserrat-Bold';
+      text-transform: uppercase;
+      color: $dark-100;
+    }
+    & p:last-child {
+      font-family: 'Montserrat-Regular';
+      text-transform: uppercase;
+      color: $dark-50;
+      margin-bottom: 1px;
+      }
+  }
 }
 
 .masked-date__field {
   width: 32rem;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
   background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $dark-25;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: 1.2rem 0 1.2rem 1.5rem;
+  padding: 0px  14px;
 
   font-family: 'Montserrat-Regular';
   font-size: 14px;
-  line-height: 18px;
   color: $dark-25;
 }
 
-@import "../../../components/length-stay/length-stay.scss";
+@import "../../../components/length-stay/scss/length-stay.scss";
 
-@import "../../../components/dates-of-stay/dates_of_stay.scss";
+@import "../../../components/filter-date/scss/filter-date.scss";
+
+@import "../../../components/subscription-field/scss/subscription-field.scss";
 
 .footer {
   flex: 0 0 auto;
