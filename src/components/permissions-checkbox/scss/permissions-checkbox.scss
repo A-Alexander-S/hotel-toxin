@@ -1,0 +1,72 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.permissions-checkbox {
+  & > .caption {
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark-100;
+    margin-bottom: 18px;
+  }
+}
+
+.permissions-checkbox__list {
+  display: flex;
+  flex-direction: column;
+  max-width: 22.2rem;
+}
+
+.permissions-checkbox_label {
+  position: relative;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  color: $dark-50;
+  margin-bottom: 15px;
+  &:nth-child(2) {
+    margin-bottom: 14px;
+  }
+  &:nth-child(3) {
+    & p {
+      line-height: 18px;
+      padding: 0px 0px 0px 1px;
+    }
+  }
+  
+  & input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  & span {
+    & p {
+      padding: 2px 0px 0px 2px;
+      margin-left: 29px;
+    }
+  }
+  & span::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid $dark-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  & span::after {
+    content: url("/src/pages/ui_kit/formElements/check-mark.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(60%,15%);
+    opacity: 0;
+  }
+  & input[type="checkbox"]:checked + span::after{
+    opacity: 1;
+  }
+  & input[type="checkbox"]:checked + span::before{
+    border: 1px solid #BC9CFF;
+  }
+}
