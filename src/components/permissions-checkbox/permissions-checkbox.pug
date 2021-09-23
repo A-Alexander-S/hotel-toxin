@@ -1,0 +1,14 @@
+mixin permissions-checkbox()
+  div.permissions-checkbox
+    div.caption
+      p Checkbox Buttons
+    div.permissions-checkbox__list
+      label.permissions-checkbox_label(for="permissions-smoke")
+        input#permissions-smoke(type="checkbox" value="permissions-smoke")
+        span #[p Можно курить]
+      label.permissions-checkbox_label(for="permissions-pets")
+        input#permissions-pets(type="checkbox" value="permissions-pets")
+        span #[p Можно с питомцами]
+      label.permissions-checkbox_label(for="permissions-guests")
+        input#permissions-guests(type="checkbox" value="permissions-guests")
+        span #[p Можно пригласить гостей (до 10 человек)]
