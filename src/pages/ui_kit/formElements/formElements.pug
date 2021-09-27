@@ -3,6 +3,7 @@ include ../../../components/amount-guest/amount-guest.pug
 include ../../../components/filter-date/filter-date.pug
 include ../../../components/subscription-field/subscription-field.pug
 include ../../../components/permissions-checkbox/permissions-checkbox.pug
+include ../../../components/gender-select/gender-select.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -54,5 +55,7 @@ html(lang="en")
           div.form-elements__column.form-elements__column_2
             div.form-elements__column-item
               +permissions-checkbox()
+            div.form-elements__column-item
+              +gender-select()
           div.form-elements__column
       footer.footer

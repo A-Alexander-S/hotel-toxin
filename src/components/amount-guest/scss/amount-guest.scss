@@ -28,7 +28,7 @@
   position: relative;
   width: 32rem;
   height: 4.4rem;
-  background: #FFFFFF;
+  background: $white;
   border: 1px solid $dark-25;
   box-sizing: border-box;
   border-radius: 4px;
@@ -120,7 +120,7 @@
   font-family: 'Montserrat-Bold';
   font-size: 12px;
   text-transform: uppercase;
-  color: #BC9CFF;
+  color: $purple;
   background-color: white;
   display: none;
 }
@@ -129,6 +129,6 @@
   font-family: 'Montserrat-Bold';
   font-size: 12px;
   text-transform: uppercase;
-  color: #BC9CFF;
+  color: $purple;
   background-color: white;
 }

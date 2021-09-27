@@ -1,0 +1,70 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.gender-select {
+  & .caption {
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark-100;
+    margin-bottom: 17px;
+  }
+}
+
+.gender-select__btns {
+  display: flex;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  color: $dark-75;
+}
+
+.gender-select__label {
+  position: relative;
+  &:first-child {
+    margin-right: 20px;
+  }
+  & input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  & span {
+    position: relative;
+    & p {
+      padding: 2px 0px 0px 0px;
+      margin-left: 31px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: $white;
+      border: 1px solid $dark-25;
+      box-sizing: border-box;
+      border-radius: 10px;
+      left: 1px;
+      top: 0px;
+    }
+    & ::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+      border-radius: 10px;
+      left: 0;
+      top: 0;
+      transform: translate(42%,32%);
+      opacity: 0;
+    }
+  }
+  
+  & input[type="radio"]:checked + span::before {
+    border: 1px solid $purple;
+  }
+  & input[type="radio"]:checked + span::after {
+    opacity: 1;
+  }
+}

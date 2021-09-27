@@ -1,0 +1,11 @@
+mixin gender-select()
+  div.gender-select
+    div.caption
+      p Radio Buttons
+    div.gender-select__btns
+      label.gender-select__label
+        input.gender-select_radio(type="radio" name="gender" value="man")
+        span #[p Мужчина]
+      label.gender-select__label
+        input.gender-select_radio(type="radio" name="gender" value="female")
+        span #[p Женщина]
