@@ -4,11 +4,11 @@ mixin permissions-checkbox()
       p Checkbox Buttons
     div.permissions-checkbox__list
       label.permissions-checkbox_label(for="permissions-smoke")
-        input#permissions-smoke(type="checkbox" value="permissions-smoke")
+        input#permissions-smoke(type="checkbox" name="smoke-permit" value="yes")
         span #[p Можно курить]
       label.permissions-checkbox_label(for="permissions-pets")
-        input#permissions-pets(type="checkbox" value="permissions-pets")
+        input#permissions-pets(type="checkbox" name="pets-permit" value="yes")
         span #[p Можно с питомцами]
       label.permissions-checkbox_label(for="permissions-guests")
-        input#permissions-guests(type="checkbox" value="permissions-guests")
+        input#permissions-guests(type="checkbox" name="guests-permit" value="yes")
         span #[p Можно пригласить гостей (до 10 человек)]

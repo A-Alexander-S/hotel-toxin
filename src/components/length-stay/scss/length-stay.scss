@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  background: #FFFFFF;
+  background: $white;
 }
 
 .date-arrival {
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   padding: 11px 15px 13px 13px;
-  background: #FFFFFF;
+  background: $white;
   border: 1px solid $dark-25;
   box-sizing: border-box;
   border-radius: 4px;
@@ -57,7 +57,7 @@
   display: flex;
   justify-content: space-between;
   padding: 11px 15px 13px 13px;
-  background: #FFFFFF;
+  background: $white;
   border: 1px solid $dark-25;
   box-sizing: border-box;
   border-radius: 4px;

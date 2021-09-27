@@ -53,7 +53,9 @@ html {
   width: 26rem;
   margin-left: 12.6rem;
   & .form-elements__column-item {
-    margin-bottom: 22px;
+    &:first-child {
+      margin-bottom: 28px;
+    }
   }
 } 
 
@@ -185,6 +187,9 @@ html {
 @import "../../../components/subscription-field/scss/subscription-field.scss";
 
 @import "../../../components/permissions-checkbox/scss/permissions-checkbox.scss";
+
+@import "../../../components/gender-select/scss/gender-select.scss";
+
 
 .footer {
   flex: 0 0 auto;
