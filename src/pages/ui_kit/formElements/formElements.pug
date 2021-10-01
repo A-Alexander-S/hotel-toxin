@@ -4,6 +4,7 @@ include ../../../components/filter-date/filter-date.pug
 include ../../../components/subscription-field/subscription-field.pug
 include ../../../components/permissions-checkbox/permissions-checkbox.pug
 include ../../../components/gender-select/gender-select.pug
+include ../../../components/special-offers/special-offers.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -58,5 +59,9 @@ html(lang="en")
               +permissions-checkbox()
             div.form-elements__column-item
               +gender-select()
+            div.form-elements__column-item
+              +special-offers("toogle")
+            div.form-elements__column-item
+              +special-offers()
           div.form-elements__column
       footer.footer

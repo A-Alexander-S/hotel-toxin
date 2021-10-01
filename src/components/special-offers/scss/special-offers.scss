@@ -1,0 +1,61 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.special-offers {
+  & > .caption {
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark-100;
+    margin-bottom: 17px;
+  }
+}
+
+.special-offers__toogle {
+  display: flex;
+  align-items: center;
+  & span {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+    color: $dark-75;
+  }
+}
+
+.special-offers__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.special-offers__label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: $white;
+  border: 1px solid $dark-25;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-right: 11px;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: $dark-25;
+    border-radius: 10px;
+    top: 3px;
+    left: 4px;
+  }
+}
+
+.special-offers__checkbox:checked + .special-offers__label {
+  border: 1px solid $purple;
+}
+
+.special-offers__checkbox:checked + .special-offers__label::before {
+    left: 22px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
