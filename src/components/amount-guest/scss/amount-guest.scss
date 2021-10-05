@@ -5,21 +5,16 @@
 .amount-guests {
   font-family: 'Montserrat-Bold';
   position: relative;
-  & > .caption {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-    & p {
-      font-family: 'Montserrat-Bold';
-      text-transform: uppercase;
-      color: $dark-100;
-    }
-  }
   &:hover > .amount-guest__dropdown {
     border: 1px solid $dark-50;
   }
 }
+
+.amount-guests__wrap-caption {
+  margin-bottom: 6px;
+}
+
+@import "../../caption/scss/caption.scss";
 
 .amount-guest__dropdown {
   display: flex;

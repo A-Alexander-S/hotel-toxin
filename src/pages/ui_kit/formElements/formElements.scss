@@ -26,10 +26,6 @@ html {
   padding-left: 141px;
 }
 
-// .form-elements__column {
-//   flex: 0 1 33%;
-// }
-
 .form-elements__column_1 {
   width: 32rem;
   & .form-elements__column-item {
@@ -66,94 +62,59 @@ html {
   }
 }
 
-.email-box {
-  & .caption {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    & p {
-      font-family: 'Montserrat-Bold';
-      text-transform: uppercase;
-      color: $dark-100;
-    }
-    & p:last-child {
-      font-family: 'Montserrat-Regular';
-      text-transform: uppercase;
-      color: $dark-50;
-      margin-bottom: 1px;
-      }
-  }
-}
+// @import "../../../components/caption/scss/caption.scss";
 
-.input-email {
-  font-family: 'Montserrat-Regular';
-  font-size: 14px;
-  
-  width: 32rem;
-  height: 4.4rem;
-  display: flex;
-  align-items: center;
-  padding-left: 14px;
-  padding-top: 1px;
-  background: #FFFFFF;
-  border: 1px solid $dark-25;
-  box-sizing: border-box;
-  border-radius: 4px;
-  &::placeholder {
-    font-family: 'Montserrat-Regular';
-    font-size: 1.4rem;
-    color: $dark-25;
-    }
-  &:hover {
-    font-size: 1.4rem;
-    border: 1px solid $dark-50;
-  }  
-}
+@import "../../../components/text-field/scss/text-field.scss";
 
 @import "../../../components/amount-guest/scss/amount-guest.scss";
 
-.masked-date {
+
+
+// .masked-date {
   // margin-top: 22.5px;
-  & .caption {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6px;
-    font-size: 1.2rem;
-    & p {
-      font-family: 'Montserrat-Bold';
-      text-transform: uppercase;
-      color: $dark-100;
-    }
-    & p:last-child {
-      font-family: 'Montserrat-Regular';
-      text-transform: uppercase;
-      color: $dark-50;
-      margin-bottom: 1px;
-      }
-  }
-}
+  // & .caption {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin-bottom: 6px;
+  //   font-size: 1.2rem;
+  //   & p {
+  //     font-family: 'Montserrat-Bold';
+  //     text-transform: uppercase;
+  //     color: $dark-100;
+  //   }
+  //   & p:last-child {
+  //     font-family: 'Montserrat-Regular';
+  //     text-transform: uppercase;
+  //     color: $dark-50;
+  //     margin-bottom: 1px;
+  //     }
+  // }
+// }
 
-.masked-date__field {
-  width: 32rem;
-  height: 4.4rem;
-  display: flex;
-  align-items: center;
-  background: #FFFFFF;
-  border: 1px solid $dark-25;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0px  14px;
+// .masked-date__field {
+//   width: 32rem;
+//   height: 4.4rem;
+//   display: flex;
+//   align-items: center;
+//   background: #FFFFFF;
+//   border: 1px solid $dark-25;
+//   box-sizing: border-box;
+//   border-radius: 4px;
+//   padding: 0px  14px;
 
-  font-family: 'Montserrat-Regular';
-  font-size: 14px;
-  color: $dark-25;
-  &:hover {
-    border: 1px solid $dark-50;
-  }
-}
+//   font-family: 'Montserrat-Regular';
+//   font-size: 14px;
+//   color: $dark-25;
+//   &:hover {
+//     border: 1px solid $dark-50;
+//   }
+// }
 
 @import "../../../components/length-stay/scss/length-stay.scss";
+
+.date-arrival__dropdown_w_100 {
+  width: 100%;
+}
 
 @import "../../../components/filter-date/scss/filter-date.scss";
 
@@ -164,6 +125,10 @@ html {
 @import "../../../components/gender-select/scss/gender-select.scss";
 
 @import "../../../components/special-offers/scss/special-offers.scss";
+
+
+
+
 
 
 .footer {
