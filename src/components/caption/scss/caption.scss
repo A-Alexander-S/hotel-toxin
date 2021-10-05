@@ -1,0 +1,19 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  & .caption__title {
+    font-family: 'Montserrat-Bold';
+    text-transform: uppercase;
+    color: $dark-100;
+  }
+  & .caption__subtitle {
+    font-family: 'Montserrat-Regular';
+    text-transform: uppercase;
+    color: $dark-50;
+    margin-bottom: 1px;
+  }
+}

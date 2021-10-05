@@ -5,6 +5,8 @@ include ../../../components/subscription-field/subscription-field.pug
 include ../../../components/permissions-checkbox/permissions-checkbox.pug
 include ../../../components/gender-select/gender-select.pug
 include ../../../components/special-offers/special-offers.pug
+include ../../../components/caption/caption.pug
+include ../../../components/text-field/text-field.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -29,25 +31,19 @@ html(lang="en")
         div.form-elements
           div.form-elements__column.form-elements__column_1
             div.form-elements__column-item
-              div.email-box
-                div.caption
-                  p Text Field
-                  p Default
-                input.input-email(type="email" placeholder="Email")
+              +text-field("Text Field","Default","text","Email")
             div.form-elements__column-item
-              div.email-box
-                div.caption
-                  p Text Field
-                  p Hover / Focus
-                input.input-email(type="email" placeholder="Email")
+              +text-field("Text Field","Hover / Focus","text","This is pretty awesome")
             div.form-elements__column-item
               +amount-guests(imgRowDown_amount_guest,imgCircleDeduct_amount_guest,imgCircleAdd_amount_guest) 
             div.form-elements__column-item
-              div.masked-date
-                div.caption
-                  p Masked text field
-                  p
-                div.masked-date__field ДД.ММ.ГГГГ
+              div.date-text-field
+                div.date-arrival
+                  +caption("masked text field")
+                  input.date-arrival__dropdown.date-arrival__dropdown_w_100(type="text" name="date-arrival" placeholder="ДД.ММ.ГГГГ")
+                //- +text-field("masked text field","","text","ДД.ММ.ГГГГ")
+                //- +caption('masked text field')
+                //- div.masked-date__field ДД.ММ.ГГГГ
             div.form-elements__column-item
               +length-stay("date Dropdown","date Dropdown",imgRowDown_length_stay)
             div.form-elements__column-item  
@@ -63,5 +59,10 @@ html(lang="en")
               +special-offers("toogle")
             div.form-elements__column-item
               +special-offers()
+            div.form-elements__column-item
+              div.like-button
+                div.caption
+                  p like button
+                div.like-button__
           div.form-elements__column
       footer.footer

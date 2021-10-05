@@ -7,26 +7,24 @@
   justify-content: space-between;
   box-sizing: border-box;
   background: $white;
-  & .img-row {
+  & .arrow-down {
     margin: 5px 0px 0px 0px;
   }
 }
 
 .date-arrival {
-  & p {    
-    font-family: 'Montserrat-Bold';
-    font-size: 1.2rem;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $dark-100;
-    margin-bottom: .5rem;
+  position: relative;
+  & .arrow-down {
+    position: absolute;
+    top: 32px;
+    right: 15px;
+  }
+  & .caption {
+    margin-bottom: 7px;
   }
 }
-
 .date-arrival__dropdown {
   width: 15rem;
-  display: flex;
-  justify-content: space-between;
   padding: 11px 14px 13px 15px;
   background: $white;
   border: 1px solid $dark-25;
@@ -34,28 +32,31 @@
   border-radius: 4px;
   font-family: 'Montserrat-Regular';
   font-size: 14px;
-  line-height: 18px;
   color:  $dark-75;
   &:hover {
     border: 1px solid $dark-50;
   }
+  &::placeholder {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+    color: $dark-25;
+  }
 }
 
 .date-departure {
-  & p {    
-    font-family: 'Montserrat-Bold';
-    font-size: 1.2rem;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $dark-100;
-    margin-bottom: .5rem;
+  position: relative;
+  & .arrow-down {
+    position: absolute;
+    top: 32px;
+    right: 15px;
+  }
+  & .caption {
+    margin-bottom: 7px;
   }
 }
 
 .date-departure__dropdown {
   width: 15rem;
-  display: flex;
-  justify-content: space-between;
   padding: 11px 14px 13px 15px;
   background: $white;
   border: 1px solid $dark-25;
@@ -67,5 +68,10 @@
   color:  $dark-75;
   &:hover {
     border: 1px solid $dark-50;
+  }
+  &::placeholder {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+    color: $dark-25;
   }
 }
