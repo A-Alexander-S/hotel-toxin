@@ -7,6 +7,7 @@ include ../../../components/gender-select/gender-select.pug
 include ../../../components/special-offers/special-offers.pug
 include ../../../components/caption/caption.pug
 include ../../../components/text-field/text-field.pug
+include ../../../components/like-button/like-button.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -60,9 +61,8 @@ html(lang="en")
             div.form-elements__column-item
               +special-offers()
             div.form-elements__column-item
-              div.like-button
-                div.caption
-                  p like button
-                div.like-button__
+              +caption("like button")
+              +like-button(2)
+              +like-button(12)
           div.form-elements__column
       footer.footer

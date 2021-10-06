@@ -1,3 +1,5 @@
+include ./mixins/arrow-down.pug
+
 mixin filter-dates (imgRowDown_filter_date)
   div.filter-dates
     div.caption
@@ -7,5 +9,4 @@ mixin filter-dates (imgRowDown_filter_date)
       div.filter-dates__arrival 19 авг
       span  &nbsp-&nbsp
       div.filter-dates__departure 23 авг
-    svg(class="img-row" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-      path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5")
+    +arrow-down()
