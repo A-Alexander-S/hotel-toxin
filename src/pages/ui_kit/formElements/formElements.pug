@@ -8,6 +8,7 @@ include ../../../components/special-offers/special-offers.pug
 include ../../../components/caption/caption.pug
 include ../../../components/text-field/text-field.pug
 include ../../../components/like-button/like-button.pug
+include ../../../components/rating/mixins/rating-stars.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -23,6 +24,11 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+    //- script(type="text/javascript" src="/src/assets/js/jquery-3.6.0.min.js")
+    //- script(type="text/javascript" src=require("../../../assets/js/jquery-3.6.0.min.js"))
+    //- script(type="text/javascript" src=require("../../../assets/js/rater.min.js"))
+    //- script(src=require("../../../../node_modules/rater-js/index.js"))
     title Form Elements
   body
     div.wrapper
@@ -64,5 +70,37 @@ html(lang="en")
               +caption("like button")
               +like-button(1)
               +like-button(12)
+            div.form-elements__column-item
+              +caption("rate button")
+              div.rating.rating_set
+                div.rating__body
+                  +rating-stars()
+                  +rating-stars()
+                  +rating-stars()
+                  +rating-stars()
+                  +rating-stars()
+                  div.rating__active
+                  div.rating__items
+                    input.rating__item(type="radio" value="1" name="rating")
+                    input.rating__item(type="radio" value="2" name="rating")
+                    input.rating__item(type="radio" value="3" name="rating")
+                    input.rating__item(type="radio" value="4" name="rating")
+                    input.rating__item(type="radio" value="5" name="rating")
+                div.rating__value 3.6
+              div.rating.rating_set
+                div.rating__body
+                  +rating-stars()
+                  +rating-stars()
+                  +rating-stars()
+                  +rating-stars()
+                  +rating-stars()
+                  div.rating__active
+                  div.rating__items
+                    input.rating__item(type="radio" value="1" name="rating")
+                    input.rating__item(type="radio" value="2" name="rating")
+                    input.rating__item(type="radio" value="3" name="rating")
+                    input.rating__item(type="radio" value="4" name="rating")
+                    input.rating__item(type="radio" value="5" name="rating")
+                div.rating__value 3.6
           div.form-elements__column
       footer.footer
