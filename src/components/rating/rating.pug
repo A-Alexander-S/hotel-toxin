@@ -1,0 +1,15 @@
+mixin rating()
+  div.rating.rating_set(data-value="3.6")
+    div.rating__body
+      +rating-stars()
+      +rating-stars()
+      +rating-stars()
+      +rating-stars()
+      +rating-stars()
+      div.rating__active
+      div.rating__items
+        input.rating__item(type="radio" value="1" name="rating")
+        input.rating__item(type="radio" value="2" name="rating")
+        input.rating__item(type="radio" value="3" name="rating")
+        input.rating__item(type="radio" value="4" name="rating")
+        input.rating__item(type="radio" value="5" name="rating")
