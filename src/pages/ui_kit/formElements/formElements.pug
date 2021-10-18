@@ -9,6 +9,7 @@ include ../../../components/caption/caption.pug
 include ../../../components/text-field/text-field.pug
 include ../../../components/like-button/like-button.pug
 include ../../../components/rating/mixins/rating-stars.pug
+include ../../../components/rating/rating.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -72,35 +73,8 @@ html(lang="en")
               +like-button(12)
             div.form-elements__column-item
               +caption("rate button")
-              div.rating.rating_set
-                div.rating__body
-                  +rating-stars()
-                  +rating-stars()
-                  +rating-stars()
-                  +rating-stars()
-                  +rating-stars()
-                  div.rating__active
-                  div.rating__items
-                    input.rating__item(type="radio" value="1" name="rating")
-                    input.rating__item(type="radio" value="2" name="rating")
-                    input.rating__item(type="radio" value="3" name="rating")
-                    input.rating__item(type="radio" value="4" name="rating")
-                    input.rating__item(type="radio" value="5" name="rating")
-                div.rating__value 3.6
-              div.rating.rating_set
-                div.rating__body
-                  +rating-stars()
-                  +rating-stars()
-                  +rating-stars()
-                  +rating-stars()
-                  +rating-stars()
-                  div.rating__active
-                  div.rating__items
-                    input.rating__item(type="radio" value="1" name="rating")
-                    input.rating__item(type="radio" value="2" name="rating")
-                    input.rating__item(type="radio" value="3" name="rating")
-                    input.rating__item(type="radio" value="4" name="rating")
-                    input.rating__item(type="radio" value="5" name="rating")
-                div.rating__value 3.6
+              div.inner
+                +rating()
+                +rating()
           div.form-elements__column
       footer.footer
