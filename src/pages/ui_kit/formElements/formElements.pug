@@ -25,11 +25,6 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    //- script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
-    //- script(type="text/javascript" src="/src/assets/js/jquery-3.6.0.min.js")
-    //- script(type="text/javascript" src=require("../../../assets/js/jquery-3.6.0.min.js"))
-    //- script(type="text/javascript" src=require("../../../assets/js/rater.min.js"))
-    //- script(src=require("../../../../node_modules/rater-js/index.js"))
     title Form Elements
   body
     div.wrapper
@@ -49,9 +44,6 @@ html(lang="en")
                 div.date-arrival
                   +caption("masked text field")
                   input.date-arrival__dropdown.date-arrival__dropdown_w_100(type="text" name="date-arrival" placeholder="ДД.ММ.ГГГГ")
-                //- +text-field("masked text field","","text","ДД.ММ.ГГГГ")
-                //- +caption('masked text field')
-                //- div.masked-date__field ДД.ММ.ГГГГ
             div.form-elements__column-item
               +length-stay("date Dropdown","date Dropdown",imgRowDown_length_stay)
             div.form-elements__column-item  
@@ -76,5 +68,13 @@ html(lang="en")
               div.inner
                 +rating()
                 +rating()
-          div.form-elements__column
+          div.form-elements__column.form-elements__column_3
+            div.form-elements__column-item
+              div.range-slider
+                +caption("Range Slider")
+                div.range-slider__price-range
+                  div.range-slider__inputs
+                    input.range-slider__input#input-0(type="number" placeholder="5000₽")
+                    input.range-slider__input#input-1(type="number" placeholder="10000₽")
+                div#range-slider()
       footer.footer

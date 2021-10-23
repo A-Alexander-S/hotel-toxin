@@ -48,6 +48,7 @@ html {
 .form-elements__column_2 {
   width: 26rem;
   margin-left: 12.6rem;
+  margin-right: 132px;
   & .form-elements__column-item {
     &:first-child {
       margin-bottom: 28px;
@@ -84,6 +85,10 @@ html {
   }
 }
 
+.form-elements__column_3 {
+
+}
+
 @import "../../../components/text-field/scss/text-field.scss";
 
 @import "../../../components/amount-guest/scss/amount-guest.scss";
@@ -109,7 +114,79 @@ html {
 
 @import "../../../components/rating/scss/rating.scss";
 
+@import "nouislider/dist/nouislider.css";
 
+.range-slider {
+  // display: flex;
+  width: 266.6px;
+  justify-content: space-between;
+  & > .caption {
+    display: inline-block;
+    margin-right: 46px;
+    margin-bottom: 22px;
+  }
+}
+
+.range-slider__price-range {
+  display: inline-block;
+  
+}
+
+.range-slider__inputs {
+  display: inline-block;
+  & > input {
+    font-family: 'Montserrat-Regular';
+    font-size: 12px;
+    // text-align: right;
+    text-transform: uppercase;
+    color: $dark-50;
+    border: 1px solid $dark-50;
+    width: 63px;
+    height: 13px;
+  }
+}
+
+.noUi-target {
+  background: #FFFFFF;
+  border: 1px solid $dark-25;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 266px;
+  height: 6px;
+}
+
+.noUi-connect {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 16px;
+  height:  16px;
+  // right: -17px;
+  // top: -6px;
+}
+
+
+.noUi-handle {
+  box-shadow: none;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+  right: -5px;
+}
+
+.noUi-horizontal .noUi-handle-lower {
+  right: -13px;
+}
 
 .footer {
   flex: 0 0 auto;
