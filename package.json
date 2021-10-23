@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "jquery": "^3.6.0",
+    "nouislider": "^15.5.0",
     "rater-js": "^1.0.1"
   }
 }
