@@ -1,0 +1,11 @@
+include ../caption/caption.pug
+
+mixin range-slider()
+  div.range-slider
+    +caption("Range Slider")
+    div.range-slider__price-range
+      div.range-slider__inputs
+        input.range-slider__input#input-0(type="number" placeholder="5000₽")
+        span -
+        input.range-slider__input#input-1(type="number" placeholder="10000₽")
+    div#range-slider()

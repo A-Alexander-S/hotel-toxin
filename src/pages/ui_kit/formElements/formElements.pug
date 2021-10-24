@@ -10,6 +10,7 @@ include ../../../components/text-field/text-field.pug
 include ../../../components/like-button/like-button.pug
 include ../../../components/rating/mixins/rating-stars.pug
 include ../../../components/rating/rating.pug
+include ../../../components/range-slider/range-slider.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -70,11 +71,5 @@ html(lang="en")
                 +rating()
           div.form-elements__column.form-elements__column_3
             div.form-elements__column-item
-              div.range-slider
-                +caption("Range Slider")
-                div.range-slider__price-range
-                  div.range-slider__inputs
-                    input.range-slider__input#input-0(type="number" placeholder="5000₽")
-                    input.range-slider__input#input-1(type="number" placeholder="10000₽")
-                div#range-slider()
+              +range-slider()
       footer.footer
