@@ -1,5 +1,8 @@
 include ../caption/caption.pug
 include ./mixins/arrow-down.pug
+include ./mixins/plus-in-circle.pug
+include ./mixins/minus-in-circle.pug
+include ../button/button.pug
 
 mixin amount-guests (imgRowDown,imgCircleDeduct,imgCircleAdd)
   div.amount-guests
@@ -12,36 +15,21 @@ mixin amount-guests (imgRowDown,imgCircleDeduct,imgCircleAdd)
       li.amount-guest__list-item
         div Взрослые
         div.amount-guest__adults
-          svg(class="pic-deduct-adults" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
-            g(opacity="0.38")
-            path(class="pic-deduct-adults_item-s" d="M0.5 15C0.5 6.99187 6.99187 0.5 15 0.5C23.0081 0.5 29.5 6.99187 29.5 15C29.5 23.0081 23.0081 29.5 15 29.5C6.99187 29.5 0.5 23.0081 0.5 15Z" stroke="#1F2041" stroke-opacity="0.1")
-            path(class="pic-deduct-adults_item-f" d="M12.6435 15.564H17.3595V16.68H12.6435V15.564Z" fill="#1F2041" fill-opacity="0.1")
+          +minus-in-circle("pic-deduct-adults", "adults")
           div.amount-guest__quantity-adults 0
-          svg(class="pic-add-adults" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25")
-            path(d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5")
+          +plus-in-circle("pic-add-adults")
       li.amount-guest__list-item
         div Дети
         div.amount-guest__children
-          svg(class="pic-deduct-children" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
-            g(opacity="0.38")
-            path(class="pic-deduct-children_item-s" d="M0.5 15C0.5 6.99187 6.99187 0.5 15 0.5C23.0081 0.5 29.5 6.99187 29.5 15C29.5 23.0081 23.0081 29.5 15 29.5C6.99187 29.5 0.5 23.0081 0.5 15Z" stroke="#1F2041" stroke-opacity="0.1")
-            path(class="pic-deduct-children_item-f" d="M12.6435 15.564H17.3595V16.68H12.6435V15.564Z" fill="#1F2041" fill-opacity="0.1")
+          +minus-in-circle("pic-deduct-children","children")
           div.amount-guest__quantity-children 0
-          svg(class="pic-add-children" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25")
-            path(d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5")
+          +plus-in-circle("pic-add-children")
       li.amount-guest__list-item
         div Младенцы
         div.amount-guest__babies
-          svg(class="pic-deduct-babies" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
-            g(opacity="0.38")
-            path(class="pic-deduct-babies_item-s" d="M0.5 15C0.5 6.99187 6.99187 0.5 15 0.5C23.0081 0.5 29.5 6.99187 29.5 15C29.5 23.0081 23.0081 29.5 15 29.5C6.99187 29.5 0.5 23.0081 0.5 15Z" stroke="#1F2041" stroke-opacity="0.1")
-            path(class="pic-deduct-babies_item-f" d="M12.6435 15.564H17.3595V16.68H12.6435V15.564Z" fill="#1F2041" fill-opacity="0.1")
+          +minus-in-circle("pic-deduct-babies","babies")
           div.amount-guest__quantity-babies 0
-          svg(class="pic-add-babies" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25")
-            path(d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5")
+          +plus-in-circle("pic-add-babies")
       li.amount-guest__list-buttons
-        button.amount-guest__btn-clear(name="button") очистить
-        button.amount-guest__btn-apply(name="button") применить
+        +button("button_text", "очистить")(class="amount-guest__btn-clear")
+        +button("button_text", "применить")(class="amount-guest__btn-apply")
