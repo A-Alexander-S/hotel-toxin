@@ -1,6 +1,6 @@
 include ./mixins/next-arrow.pug
 
-mixin button-next()
+mixin button-next(text, width, height)
   div.button-next
-    button.button-next__btn перейти к оплате
-    +next-arrow()
+    button.button-next__btn(type="button"  style="" + width + height)=text
+      +next-arrow()

@@ -87,35 +87,42 @@ html {
 
 .form-elements__column_3 {
   & .form-elements__column-item {
+    & .wrap-btn {
+      display: flex;
+      width: 217px;
+      justify-content: space-between;
+    }
     &:first-child {
     margin-bottom: 46px;
     }
     &:nth-child(2) {
       margin-bottom: 30px;
-    }
-    &:nth-child(2) .caption {
-      margin-bottom: 17px;
-      padding-left: 1px;
-    }
-    &:nth-child(2) .wrap-btn {
-      padding-left: 2px;
+      & > .caption {
+        margin-bottom: 17px;
+        padding-left: 1px;
+      }
+      & > .wrap-btn {
+        width: 217px;
+        padding-left: 2px;
+      }
     }
     &:nth-child(3) {
-      margin-bottom: 32px;
+      margin-bottom: 31px;
       padding-left: 1px;
     }
     &:nth-child(4) {
-      padding-left: 2px;
-      margin-bottom: 32px;
+      padding-left: 0px;
+      margin-bottom: 29px;
+      & > .wrap-btn {
+        padding-left: 1px;
+        padding-right: 74px;
+      }
     }
-    &:nth-child(4) > .wrap-btn {
-      padding-right: 75px;
+    &:nth-child(5) {
+      & > .wrap-btn {
+        width: 320px;
+      }
     }
-  }
-  & .form-elements__column-item .wrap-btn {
-    display: flex;
-    width: 217px;
-    justify-content: space-between;
   }
 }
 
@@ -146,72 +153,8 @@ html {
 
 @import "../../../components/range-slider/scss/range-slider.scss";
 
+@import "../../../components/button/scss/button.scss";
 
-.button {
-  // display: inline-block;
-}
-
-.button__btn {
-  width: 99px;
-  height: 44px;
-  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-  border-radius: 22px;
-  color: $white;
-  font-family: 'Montserrat-Bold';
-  font-size: 12px;
-  text-transform: uppercase;
-  color: $white;
-  &:hover {
-    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-    opacity: 0.5;
-  }
-}
-
-
-
-
-
-.button-border {
-
-}
-
-.button-border__btn {
-  width: 99px;
-  height: 44px;
-  border-radius: 22px;
-  background-color:  $white;
-  font-family: 'Montserrat-Bold';
-  font-size: 12px;
-  text-transform: uppercase;
-  color: $purple;
-  cursor: pointer;
-  border: 2px solid;
-  // border-color:  rgba(188, 156, 255, 1);
-  border-color: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
-  // border-color: linear-gradient(180deg, rgba(188, 156, 255, .5) 0%, rgba(139,164,249, 0.5) 100%);
-
-
-  &:hover {
-    border-color:  rgba(188, 156, 255, .5);
-    // border-image: linear-gradient(180deg, rgba(188, 156, 255, .5) 0%, rgba(139,164,249, .5) 100%);
-    // border-color: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-  }
-}
-
-
-
-
-
-.button-text__btn {
-  font-family: 'Montserrat-Bold';
-  font-size: 12px;
-  text-transform: uppercase;
-  color:  $purple;
-  cursor: pointer;
-  &:hover {
-    color:$dark-50;
-  }
-}
 
 
 @import "../../../components/button-next/scss/button-next.scss";
