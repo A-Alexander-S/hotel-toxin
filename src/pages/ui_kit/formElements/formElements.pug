@@ -11,6 +11,7 @@ include ../../../components/like-button/like-button.pug
 include ../../../components/rating/mixins/rating-stars.pug
 include ../../../components/rating/rating.pug
 include ../../../components/range-slider/range-slider.pug
+include ../../../components/button/button.pug
 include ../../../components/button-next/button-next.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
@@ -32,12 +33,6 @@ html(lang="en")
     div.wrapper
       div.header
         img.logo(src=require("../../../assets/img/logo.svg"), alt="Логотип")
-        //- svg(class="arrow-forward" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-        //-   path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear_18445:386)")
-        //-   defs
-        //-     linearGradient(id="paint0_linear_18445:386" x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse")
-        //-       stop(stop-color="#BC9CFF")
-        //-       stop(offset="1" stop-color="#8BA4F9")
       main.main
         div.form-elements
           div.form-elements__column.form-elements__column_1
@@ -82,23 +77,17 @@ html(lang="en")
             div.form-elements__column-item
               +caption("buttons")
               div.wrap-btn
-                div.button
-                  button.button__btn click me
-                div.button
-                  button.button__btn click me
+                +button("button_back", "click me", "width:99px;", "height:44px;")
+                +button("button_back", "click me", "width:99px;", "height:44px;")
             div.form-elements__column-item
               div.wrap-btn
-                div.button-border
-                  button.button-border__btn click me
-                div.button-border
-                  button.button-border__btn click me
+                +button("button_border", "click me", "width:99px;", "height:44px;")
+                +button("button_border", "click me", "width:99px;", "height:44px;")
             div.form-elements__column-item
               div.wrap-btn
-                dib.button-text
-                  div.button-text__btn click me
-                dib.button-text
-                  div.button-text__btn click me
+                +button("button_text", "click me", "width:auto;", "height:15px;")
+                +button("button_text", "click me", "width:auto;", "height:15px;")
             div.form-elements__column-item
               div.wrap-btn
-                +button-next()
+                +button-next("перейти к оплате", "width:100%;", "height:44px;")
       footer.footer

@@ -2,25 +2,26 @@
 @import "../../../assets/styles/fonts.scss";
 
 .button-next {
-  position: relative;
+  width: 100%;
 }
 
 .button-next__btn {
-  width: 320px;
-  height: 44px;
+  position: relative;
+  text-align: center;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
   font-family: 'Montserrat-Bold';
   font-size: 12px;
   text-transform: uppercase;
   color: $white;
+  box-sizing: border-box;
   &:hover {
     opacity: 0.5;
   }
 }
 
 .button-next-arrow {
-  position: absolute;
-  top: 13px;
+  position:absolute;
   right: 12px;
+  top: 14px;
 }
