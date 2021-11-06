@@ -2,7 +2,7 @@ include ../caption/caption.pug
 include ./mixins/arrow-forward.pug
 
 mixin subscription-field()
-  div.subscription-field
+  .subscription-field
     +caption("subscription text field")
     input.subscription-field__input(type="email" name="useremail" value="" placeholder="Email")
     +arrow-forward()
