@@ -1,7 +1,7 @@
 include ../caption/caption.pug
 
 mixin text-field(title,subtitle,type,placeholder)
-  div.text-field
-    div.text-field__wrap-caption
+  .text-field
+    .text-field__wrap-caption
       +caption(title,subtitle)
     input.text-field__input(type=type placeholder=placeholder)
