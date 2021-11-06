@@ -30,64 +30,64 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Form Elements
   body
-    div.wrapper
-      div.header
+    .wrapper
+      .header
         img.logo(src=require("../../../assets/img/logo.svg"), alt="Логотип")
       main.main
-        div.form-elements
-          div.form-elements__column.form-elements__column_1
-            div.form-elements__column-item
+        .form-elements
+          .form-elements__column.form-elements__column_1
+            .form-elements__column-item
               +text-field("Text Field","Default","text","Email")
-            div.form-elements__column-item
+            .form-elements__column-item
               +text-field("Text Field","Hover / Focus","text","This is pretty awesome")
-            div.form-elements__column-item
+            .form-elements__column-item
               +amount-guests(imgRowDown_amount_guest,imgCircleDeduct_amount_guest,imgCircleAdd_amount_guest) 
-            div.form-elements__column-item
-              div.date-text-field
-                div.date-arrival
+            .form-elements__column-item
+              .date-text-field
+                .date-arrival
                   +caption("masked text field")
                   input.date-arrival__dropdown.date-arrival__dropdown_w_100(type="text" name="date-arrival" placeholder="ДД.ММ.ГГГГ")
-            div.form-elements__column-item
+            .form-elements__column-item
               +length-stay("date Dropdown","date Dropdown",imgRowDown_length_stay)
-            div.form-elements__column-item  
+            .form-elements__column-item  
               +filter-dates(imgRowDown_filter_date)
-            div.form-elements__column-item
+            .form-elements__column-item
               +subscription-field()
-          div.form-elements__column.form-elements__column_2
-            div.form-elements__column-item
+          .form-elements__column.form-elements__column_2
+            .form-elements__column-item
               +permissions-checkbox()
-            div.form-elements__column-item
+            .form-elements__column-item
               +gender-select()
-            div.form-elements__column-item
+            .form-elements__column-item
               +special-offers("toogle")
-            div.form-elements__column-item
+            .form-elements__column-item
               +special-offers()
-            div.form-elements__column-item
+            .form-elements__column-item
               +caption("like button")
               +like-button(1)
               +like-button(12)
-            div.form-elements__column-item
+            .form-elements__column-item
               +caption("rate button")
-              div.inner
+              .inner
                 +rating()
                 +rating()
-          div.form-elements__column.form-elements__column_3
-            div.form-elements__column-item
+          .form-elements__column.form-elements__column_3
+            .form-elements__column-item
               +range-slider()
-            div.form-elements__column-item
+            .form-elements__column-item
               +caption("buttons")
-              div.wrap-btn
+              .wrap-btn
                 +button("button_back", "click me", "width:99px;", "height:44px;")
                 +button("button_back", "click me", "width:99px;", "height:44px;")
-            div.form-elements__column-item
-              div.wrap-btn
+            .form-elements__column-item
+              .wrap-btn
                 +button("button_border", "click me", "width:99px;", "height:44px;")
                 +button("button_border", "click me", "width:99px;", "height:44px;")
-            div.form-elements__column-item
-              div.wrap-btn
+            .form-elements__column-item
+              .wrap-btn
                 +button("button_text", "click me", "width:auto;", "height:15px;")
                 +button("button_text", "click me", "width:auto;", "height:15px;")
-            div.form-elements__column-item
-              div.wrap-btn
+            .form-elements__column-item
+              .wrap-btn
                 +button-next("перейти к оплате", "width:100%;", "height:44px;")
       footer.footer
