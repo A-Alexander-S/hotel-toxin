@@ -3,12 +3,12 @@ include ../text-field/text-field.pug
 include ./mixins/arrow-down.pug
 
 mixin length-stay(arrival,departure,path)
-  div.length-stay
-    div.date-arrival
+  .length-stay
+    .date-arrival
       +caption(arrival)
       input.date-arrival__dropdown(type="text" name="date-arrival" placeholder="ДД.ММ.ГГГГ")
       +arrow-down()
-    div.date-departure
+    .date-departure
       +caption(arrival)
       input.date-departure__dropdown(type="text" name="date-arrival" placeholder="19.08.2019")
       +arrow-down()
