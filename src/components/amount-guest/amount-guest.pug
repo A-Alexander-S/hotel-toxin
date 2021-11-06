@@ -5,30 +5,30 @@ include ./mixins/minus-in-circle.pug
 include ../button/button.pug
 
 mixin amount-guests (imgRowDown,imgCircleDeduct,imgCircleAdd)
-  div.amount-guests
-    div.amount-guests__wrap-caption
+  .amount-guests
+    .amount-guests__wrap-caption
       +caption('Dropdown')
-    div.amount-guest__dropdown
-      div.amount-guest__dropdown-desc Сколько гостей
+    .amount-guest__dropdown
+      .amount-guest__dropdown-desc Сколько гостей
       +arrow-down()
     ul.amount-guest__list
       li.amount-guest__list-item
         div Взрослые
-        div.amount-guest__adults
+        .amount-guest__adults
           +minus-in-circle("pic-deduct-adults", "adults")
-          div.amount-guest__quantity-adults 0
+          .amount-guest__quantity-adults 0
           +plus-in-circle("pic-add-adults")
       li.amount-guest__list-item
         div Дети
-        div.amount-guest__children
+        .amount-guest__children
           +minus-in-circle("pic-deduct-children","children")
-          div.amount-guest__quantity-children 0
+          .amount-guest__quantity-children 0
           +plus-in-circle("pic-add-children")
       li.amount-guest__list-item
         div Младенцы
-        div.amount-guest__babies
+        .amount-guest__babies
           +minus-in-circle("pic-deduct-babies","babies")
-          div.amount-guest__quantity-babies 0
+          .amount-guest__quantity-babies 0
           +plus-in-circle("pic-add-babies")
       li.amount-guest__list-buttons
         +button("button_text", "очистить")(class="amount-guest__btn-clear")
