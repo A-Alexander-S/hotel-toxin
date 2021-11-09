@@ -1,0 +1,53 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $dark-25;
+  border-radius: 4px;
+  padding: 0 15px 0 14px;
+  background: #FFFFFF;
+  background-color: $white;
+  box-sizing: border-box;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  color: $dark-75;
+  &::after {
+    content: url("/src/components/dropdown/img/row_down.svg");
+  }
+}
+
+.dropdown-list {
+
+}
+
+.dropdown-list__item {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat-Bold';
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $dark-100;
+}
+
+.dropdown-list__item-subtitle {
+
+}
+
+.dropdown-list__item-change-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-list__item-counter-quantity {
+  text-align: center;
+  width: 20px;
+}
