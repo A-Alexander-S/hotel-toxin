@@ -22,11 +22,19 @@ html {
 
 .form-elements {
   display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
   padding-top: 69px;
   padding-left: 141px;
+  width: 1299px;
+}
+
+.form-elements__column {
+  // flex: 0 1 33%;
 }
 
 .form-elements__column_1 {
+  // flex-basis: 27.633%;
   width: 32rem;
   & .form-elements__column-item {
     margin-bottom: 22px;    
@@ -46,6 +54,7 @@ html {
 }
 
 .form-elements__column_2 {
+  // width: 22.452%;
   width: 26rem;
   margin-left: 12.6rem;
   margin-right: 132px;
@@ -86,6 +95,7 @@ html {
 }
 
 .form-elements__column_3 {
+  // flex-basis: 27.633%;
   & .form-elements__column-item {
     & .wrap-btn {
       display: flex;
@@ -126,9 +136,11 @@ html {
   }
 }
 
+@import "../../../components/caption/scss/caption.scss";
+
 @import "../../../components/text-field/scss/text-field.scss";
 
-@import "../../../components/amount-guest/scss/amount-guest.scss";
+// @import "../../../components/amount-guest/scss/amount-guest.scss";
 
 
 @import "../../../components/length-stay/scss/length-stay.scss";
@@ -140,6 +152,12 @@ html {
 @import "../../../components/filter-date/scss/filter-date.scss";
 
 @import "../../../components/subscription-field/scss/subscription-field.scss";
+
+
+
+@import "../../../components/dropdown/scss/dropdown.scss";
+
+
 
 @import "../../../components/permissions-checkbox/scss/permissions-checkbox.scss";
 

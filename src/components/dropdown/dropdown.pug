@@ -1,0 +1,29 @@
+//- include ../button/button.pug
+include ./mixins/arrow-down.pug
+include ./mixins/minus-in-circle.pug
+include ./mixins/plus-in-circle.pug
+
+
+mixin dropdown(width,height)
+  .dropdown(style="" + width)
+    button.dropdown__btn(style="" + height) Сколько гостей
+    //- +arrow-down()
+    ul.dropdown-list
+      li.dropdown-list__item взрослые
+        span.dropdown-list__item-subtitle
+        .dropdown-list__item-change-quantity
+          +minus-in-circle("pic-deduct-adults", "adults")
+          span.dropdown-list__item-counter-quantity 1
+          +plus-in-circle("pic-add-adults")
+      li.dropdown-list__item дети
+        span.dropdown-list__item-subtitle
+        .dropdown-list__item-change-quantity
+          +minus-in-circle("pic-deduct-adults", "adults")
+          span.dropdown-list__item-counter-quantity 2
+          +plus-in-circle("pic-add-adults")
+      li.dropdown-list__item младенцы
+        span.dropdown-list__item-subtitle
+        .dropdown-list__item-change-quantity
+          +minus-in-circle("pic-deduct-adults", "adults")
+          span.dropdown-list__item-counter-quantity 3
+          +plus-in-circle("pic-add-adults")

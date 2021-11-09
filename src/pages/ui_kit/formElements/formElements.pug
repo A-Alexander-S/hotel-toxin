@@ -1,5 +1,5 @@
 include ../../../components/length-stay/length-stay.pug
-include ../../../components/amount-guest/amount-guest.pug
+//- include ../../../components/amount-guest/amount-guest.pug
 include ../../../components/filter-date/filter-date.pug
 include ../../../components/subscription-field/subscription-field.pug
 include ../../../components/permissions-checkbox/permissions-checkbox.pug
@@ -13,6 +13,7 @@ include ../../../components/rating/rating.pug
 include ../../../components/range-slider/range-slider.pug
 include ../../../components/button/button.pug
 include ../../../components/button-next/button-next.pug
+include ../../../components/dropdown/dropdown.pug
 
 - var imgRowDown_length_stay = 'components/length-stay/img/row_down';
 - var imgRowDown_amount_guest = 'components/amount-guest/img/row_down';
@@ -41,7 +42,7 @@ html(lang="en")
             .form-elements__column-item
               +text-field("Text Field","Hover / Focus","text","This is pretty awesome")
             .form-elements__column-item
-              +amount-guests(imgRowDown_amount_guest,imgCircleDeduct_amount_guest,imgCircleAdd_amount_guest) 
+              //- +amount-guests(imgRowDown_amount_guest,imgCircleDeduct_amount_guest,imgCircleAdd_amount_guest) 
             .form-elements__column-item
               .date-text-field
                 .date-arrival
@@ -90,4 +91,9 @@ html(lang="en")
             .form-elements__column-item
               .wrap-btn
                 +button-next("перейти к оплате", "width:100%;", "height:44px;")
+          .form-elements__column.form-elements__column_4
+            .form-elements__column-item
+              .wrap-dropdown
+                +caption("dropdown")
+                +dropdown("width:32rem;", "height:4.4rem;")
       footer.footer
