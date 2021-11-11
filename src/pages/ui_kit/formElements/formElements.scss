@@ -30,6 +30,7 @@ html {
 }
 
 .form-elements__column {
+  margin-bottom: 80px;
   // flex: 0 1 33%;
 }
 
@@ -134,6 +135,21 @@ html {
       }
     }
   }
+}
+
+.form-elements__column_4 {
+  margin-right: 181px;
+  & > .form-elements__column-item {
+    &:nth-child(1) {
+      margin-bottom: 22px;
+    }
+    &:nth-child(2) {
+    }
+  }
+}
+
+.form-elements__column_5 {
+  
 }
 
 @import "../../../components/caption/scss/caption.scss";

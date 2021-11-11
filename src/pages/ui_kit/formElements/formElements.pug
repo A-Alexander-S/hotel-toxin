@@ -42,6 +42,7 @@ html(lang="en")
             .form-elements__column-item
               +text-field("Text Field","Hover / Focus","text","This is pretty awesome")
             .form-elements__column-item
+              +dropdown("width:100%;","dropdown")
               //- +amount-guests(imgRowDown_amount_guest,imgCircleDeduct_amount_guest,imgCircleAdd_amount_guest) 
             .form-elements__column-item
               .date-text-field
@@ -93,7 +94,10 @@ html(lang="en")
                 +button-next("перейти к оплате", "width:100%;", "height:44px;")
           .form-elements__column.form-elements__column_4
             .form-elements__column-item
-              .wrap-dropdown
-                +caption("dropdown")
-                +dropdown("width:32rem;", "height:4.4rem;")
+                +dropdown("width:26.6rem;","dropdown")
+            .form-elements__column-item
+                +dropdown("width:26.6rem;","dropdown")
+          .form-elements__column.form-elements__column_5
+            .form-elements__column-item
+                +dropdown("width:32rem;","dropdown")
       footer.footer
