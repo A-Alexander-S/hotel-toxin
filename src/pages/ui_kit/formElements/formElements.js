@@ -3,4 +3,5 @@ import "./formElements.scss";
 import "../../../components/like-button/js/like-button.js";
 import "../../../components/rating/js/rating.js";
 import "../../../components/range-slider/js/range-slider.js";
+import "../../../components/dropdown/js/dropdown.js";
 
